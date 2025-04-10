@@ -3,7 +3,7 @@ from .serializers import AuthorSerializerV1, AuthorSerializerV2
 from .models import Author
 
 
-class AuthorListView(generics.ListAPIView):
+class AuthorListCreateView(generics.ListCreateAPIView):
     queryset = Author.objects.all()
 
     def get_serializer_class(self):

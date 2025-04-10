@@ -1,7 +1,6 @@
 from rest_framework import generics
-from .serializers import BookAvailabilitySerializerV1, BookAvailabilitySerializerV2
 from .models import BookAvailability
-
+from .serializers import BookAvailabilitySerializerV1, BookAvailabilitySerializerV2
 
 class BookAvailabilityListCreateView(generics.ListCreateAPIView):
     queryset = BookAvailability.objects.all()
@@ -13,7 +12,7 @@ class BookAvailabilityListCreateView(generics.ListCreateAPIView):
 
 class BookAvailabilityDetailView(generics.RetrieveAPIView):
     queryset = BookAvailability.objects.all()
-    lookup_field = "pk"
+    lookup_field = "book_id"
 
     def get_serializer_class(self):
         if self.request.version == "1":

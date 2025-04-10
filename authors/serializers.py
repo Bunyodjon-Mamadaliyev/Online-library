@@ -13,7 +13,7 @@ class AuthorSerializerV2(serializers.ModelSerializer):
         fields = ('id',
                   'first_name_uz',
                   'first_name_ru',
-                  'first_name_ru',
+                  'first_name_en',
                   'last_name_uz',
                   'last_name_ru',
                   'last_name_en',

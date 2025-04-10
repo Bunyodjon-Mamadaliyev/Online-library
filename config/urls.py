@@ -24,5 +24,4 @@ urlpatterns = [
     path('api/v<str:version>/', include('categories.urls')),
     path('api/v<str:version>/', include('reviews.urls')),
     path('api/v<str:version>/', include('books.urls')),
-    # path('api/', include('common.urls')),
 ]

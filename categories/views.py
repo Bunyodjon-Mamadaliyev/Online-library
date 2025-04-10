@@ -3,7 +3,7 @@ from .models import Category
 from .serializers import CategorySerializerV1, CategorySerializerV2
 
 
-class CategoryListView(generics.ListAPIView):
+class CategoryListCreateView(generics.ListCreateAPIView):
     queryset = Category.objects.all()
 
     def get_serializer_class(self):
