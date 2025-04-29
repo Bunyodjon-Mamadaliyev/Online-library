@@ -6,7 +6,7 @@ class Book(models.Model):
     authors = models.ManyToManyField('authors.Author')
     categories = models.ManyToManyField('categories.Category')
     isbn = models.CharField(max_length=13, unique=True)
-    published_date = models.DateField()
+    published_date = models.DateField(null=True, blank=True)
     publisher = models.CharField(max_length=200)
     page_count = models.PositiveIntegerField()
     language = models.CharField(max_length=50)

@@ -3,5 +3,5 @@ from .models import Review
 
 @register(Review)
 class ReviewTranslationOptions(TranslationOptions):
-    fields = ('book', 'user_name', 'comment')
+    fields = ('book',)
 
